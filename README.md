@@ -7,7 +7,6 @@
     - [macOS](#macos)
     - [About pip](#about-pip)
   - [Verify Setup](#verify-setup)
-  - [Previewing Your Work](#previewing-your-work)
 
 ## Installation
 
@@ -42,17 +41,5 @@ Open a terminal and run the following commands, replacing 'project-root' with th
 `pip` updates frequently, but versions greater than 10.x.x should work with this project.
 
 ## Verify Setup
-
-In order to verify that everything is setup correctly, run the following command from the project root.
-
-```bash
-pytest
-```
-
-You should see that all the tests are failing. This is good! We’ll be fixing these tests once we jump into the build step.
-
-Every time you want to check your work locally you can type that command, and it will report the status of every task in the project.
-
-## Previewing Your Work
-
-You can preview your work by opening a terminal, changing to the project root, activating the virtual environment, and executing the appropriate python script. For example `python sensor/sensor.py`.
+> pytest
+> python sensor/sensor.py
