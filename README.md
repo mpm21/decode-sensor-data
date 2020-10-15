@@ -41,5 +41,7 @@ Open a terminal and run the following commands, replacing 'project-root' with th
 `pip` updates frequently, but versions greater than 10.x.x should work with this project.
 
 ## Verify Setup
+``` bash
 > pytest
 > python sensor/sensor.py
+```
