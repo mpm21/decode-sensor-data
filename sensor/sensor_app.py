@@ -15,52 +15,56 @@ print("Sensor Data App")
 ##############################
 
 # Module 1 code here:
-data = load_sensor_data()
+data = load_sensor_data()   # get sensor data
 print("Loaded records: {}".format(len(data)))
+
 # Module 2 code here:
 house_info = HouseInfo(data)
 test_area = 1
-recs = house_info.get_data_by_area("id",rec_area=test_area)
+recs = house_info.get_data_by_area("id",rec_area=test_area)  # Get houseInfo data by area
 print("\nHouse sensor records for area {} = {}".format(test_area, len(recs)))
 test_date = datetime.strptime("5/9/20","%m/%d/%y")
-recs = house_info.get_data_by_date("id",rec_date=test_date)
+recs = house_info.get_data_by_date("id",rec_date=test_date)     # Get houseInfo data by date
 print("\nHouse sensor records for date: {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
+
 # Module 3 code here:
 temperature_data = TemperatureData(data)
-recs = temperature_data.get_data_by_area(rec_area=test_area)
+recs = temperature_data.get_data_by_area(rec_area=test_area)    # Get temperature data by area
 print("\nHouse Temperature sensor records for area {} = {}".format(test_area, len(recs)))
 print("\tMaximum: {0}, Minimum: {1} temperatures".format(max(recs), min(recs)))
-recs = temperature_data.get_data_by_date(rec_date=test_date)
+recs = temperature_data.get_data_by_date(rec_date=test_date)        # Get temperature data by date
 print("\nHouse Temperature sensor records for date: {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 print("\tMaximum: {0}, Minimum: {1} temperatures".format(max(recs), min(recs)))
+
 # Module 4 code here:
 humidity_data = HumidityData(data)
-recs = humidity_data.get_data_by_area(rec_area=test_area)
+recs = humidity_data.get_data_by_area(rec_area=test_area)       # Get humidity data by area
 print("\nHouse Humidity sensor records for area {} = {}".format(test_area, len(recs)))
 print("\tAverage: {} humidity".format(mean(recs)))
-recs = humidity_data.get_data_by_date(rec_date=test_date)
+recs = humidity_data.get_data_by_date(rec_date=test_date)       # Get humidity data by date
 print("House Humidity sensor records for date: {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 print("\tAverrage: {} humidity".format(mean(recs)))
 particle_data = ParticleData(data)
-recs = particle_data.get_data_by_area(rec_area=test_area)
+recs = particle_data.get_data_by_area(rec_area=test_area)       # Get particle data by area
 print("\nHouse Particle sensor records for area {} = {}".format(test_area, len(recs)))
 concentrations = particle_data.get_data_concentrations(data=recs)
 print("\tGood Air Quality Recs: {}".format(concentrations["good"]))
 print("\tModerate Air Quality Recs: {}".format(concentrations["moderate"]))
 print("\tBad Air Quality Recs: {}".format(concentrations["bad"]))
-recs = particle_data.get_data_by_date(rec_date=test_date)
+recs = particle_data.get_data_by_date(rec_date=test_date)       # Get particle data by date
 print("\nHouse Particle sensor records for area {} = {}".format(test_date.strftime("%m/%d/%y"), len(recs)))
 concentrations = particle_data.get_data_concentrations(data=recs)
 print("\tGood Air Quality Recs: {}".format(concentrations["good"]))
 print("\tModerate Air Quality Recs: {}".format(concentrations["moderate"]))
 print("\tBad Air Quality Recs: {}".format(concentrations["bad"]))
+
 # Module 5 code here:
 energy_data = EnergyData(data)
-recs = energy_data.get_data_by_area(rec_area=test_area)
+recs = energy_data.get_data_by_area(rec_area=test_area)     # Get enery data by area
 print("\nHouse Energy sensor records for area {} = {}".format(test_area, len(recs)))
 total_energy = energy_data.calculate_energy_usage(data=recs)
 print("\tEnergy Usage: {:2.2} Watts".format(total_energy))
-recs = energy_data.get_data_by_date(rec_date=test_date)
+recs = energy_data.get_data_by_date(rec_date=test_date)     # Get energy data by date
 print("House Energy sensor records for date: {} = {}".format( test_date.strftime("%m/%d/%y"), len(recs)))
-total_energy = energy_data.calculate_energy_usage(data=recs)
+# total_energy = energy_data.calculate_energy_usage(data=recs)
 print("\tEnergy Usage: {:2.2} Watts".format(total_energy))

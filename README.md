@@ -1,8 +1,6 @@
 # Decoding Sensor Data with Python
 
 - [Decoding Sensor Data with Python](#decoding-sensor-data-with-python)
-  - [Status](#status)
-  - [Overview](#overview)
   - [Installation](#installation)
     - [Verify Local Environment](#verify-local-environment)
     - [Windows](#windows)
@@ -10,14 +8,6 @@
     - [About pip](#about-pip)
   - [Verify Setup](#verify-setup)
   - [Previewing Your Work](#previewing-your-work)
-
-## Status
-
-This is a **Draft**.
-
-## Overview
-
-This project is design to be completed on [Pluralsight](https://pluralsight.com). To find out more see here: [https://www.pluralsight.com/product/projects](https://www.pluralsight.com/product/projects).
 
 ## Installation
 
